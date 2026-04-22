@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Setter — Viralité Booster 697€</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--orange:#FF5C00;--ol:#FFF0E8;--dark:#0F0F0F;--border:#E8E6E2;--grey:#F5F4F2;--text:#1A1A1A;--muted:#888;--red:#E53935;--blue:#4A9EFF;--green:#18A558;}
+html,body{height:100%;}
+body{font-family:'DM Sans',sans-serif;background:var(--grey);color:var(--text);}
+header{height:52px;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:fixed;top:0;left:0;right:0;z-index:300;}
+.logo{font-family:'Syne',sans-serif;font-size:15px;color:#fff;}.logo span{color:var(--orange);}
+.badge{background:var(--orange);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;}
+.sync{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,0.5);}
+.sdot{width:7px;height:7px;border-radius:50%;background:var(--muted);transition:background 0.3s;}
+.sdot.ok{background:var(--green);}.sdot.saving{background:var(--orange);animation:pulse 0.8s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.bnav{position:fixed;bottom:0;left:0;right:0;height:58px;background:#fff;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;z-index:300;}
+.nb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:none;background:transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.nb .ic{font-size:20px;}.nb.on{color:var(--orange);}
+.pg{position:fixed;top:52px;left:0;right:0;bottom:58px;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none;padding:16px 14px 24px;}
+.pg.on{display:block;}
+.lbl{font-family:'Syne',sans-serif;font-size:10px;font-weight:800;letter-spacing:2px;color:var(--orange);text-transform:uppercase;margin-bottom:10px;}
+.rbox{background:var(--ol);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:13px;line-height:1.6;}
+.rbox strong{color:var(--orange);}
+.lscroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin-bottom:16px;scrollbar-width:none;}
+.lscroll::-webkit-scrollbar{display:none;}
+.lpill{display:flex;align-items:center;gap:6px;flex-shrink:0;background:#fff;border:1.5px solid var(--border);border-radius:30px;padding:7px 12px;white-space:nowrap;cursor:pointer;font-size:12px;font-weight:600;-webkit-tap-highlight-color:transparent;transition:all 0.12s;}
+.lpill.on{border-color:var(--orange);background:var(--ol);color:var(--orange);}
+.chip{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;}
+.hot{background:#FFEAEA;color:var(--red);}.warm{background:#FFF3E0;color:#E65100;}.cold{background:#F0F0F0;color:var(--muted);}
+.sc{display:none;}.sc.on{display:block;}
+.step{margin-bottom:14px;}.sh{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.sd{background:var(--orange);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:800;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sn{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.dm{background:#F0F7FF;border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:10px 13px;font-size:13.5px;font-style:italic;line-height:1.55;color:var(--text);margin-bottom:6px;}
+.dm.note{background:var(--ol);border-color:var(--orange);font-style:normal;font-size:12px;color:#555;}
+.dm.warn{background:#FFF3E0;border-color:#E65100;font-style:normal;font-size:12px;color:#B84000;}
+.divl{height:1px;background:var(--border);margin:18px 0;}
+.obj{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;}
+.oq{font-size:12px;font-weight:700;color:var(--red);margin-bottom:5px;}.oa{font-size:13px;line-height:1.55;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 10px;text-align:center;}
+.sn2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--dark);display:block;}.sn2.o{color:var(--orange);}
+.sl{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;}
+.lcard{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;}
+.ltop{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.lpseudo input{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--dark);border:none;outline:none;background:transparent;width:160px;padding:0;}
+.lpseudo input::placeholder{color:#ddd;}
+.delbtn{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;padding:4px;-webkit-tap-highlight-color:transparent;}
+.lfields{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.fld{display:flex;flex-direction:column;gap:3px;}
+.flbl{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;}
+.fld select,.fld input[type="date"],.fld input[type="text"]{border:1.5px solid var(--border);border-radius:7px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--dark);padding:7px 8px;outline:none;background:#fff;width:100%;-webkit-appearance:none;}
+.fld select:focus,.fld input:focus{border-color:var(--orange);}
+.abtn{width:100%;padding:14px;border-radius:10px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:10px;-webkit-tap-highlight-color:transparent;}
+.abtn:active{background:var(--orange);}
+.sbtns{display:flex;gap:8px;margin-bottom:16px;}
+.sbtn{flex:1;padding:10px;border-radius:8px;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;}
+.sbtn:active{border-color:var(--orange);color:var(--orange);}
+.rstrip{background:var(--dark);border-radius:10px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:7px;}
+.pill{background:rgba(255,255,255,0.08);color:#fff;font-size:12px;padding:5px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);}
+.pill strong{color:var(--orange);}
+@media(min-width:768px){
+  html,body{overflow:auto;height:auto;}
+  .bnav{display:none;}
+  .pg{position:static;display:block!important;overflow:visible;top:auto;left:auto;right:auto;bottom:auto;padding:24px 24px 40px;}
+  .dlayout{display:grid;grid-template-columns:400px 1fr;min-height:calc(100vh - 52px);margin-top:52px;}
+  #pg-scripts{background:#fff;border-right:1px solid var(--border);position:sticky;top:52px;height:calc(100vh - 52px);overflow-y:auto;padding:24px 20px 40px;}
+  #pg-tableau{padding:24px 24px 40px;}
+  .lscroll{flex-direction:column;overflow-x:visible;padding-bottom:0;gap:5px;}
+  .lpill{border-radius:8px;padding:9px 12px;}
+  .stats{grid-template-columns:repeat(4,1fr);}
+  .mobile-only{display:none!important;}
+  .desktop-only{display:block!important;}
+}
+@media(max-width:767px){
+  .mobile-only{display:block;}
+  .desktop-only{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⚡ <span>Viralité</span> Booster</div>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="sync"><div class="sdot" id="sdot"></div><span id="slbl"></span></div>
+    <div class="badge">697€</div>
+  </div>
+</header>
+
+<div class="dlayout">
+
+<!-- SCRIPTS -->
+<div class="pg on" id="pg-scripts">
+  <div class="lbl">La règle</div>
+  <div class="rbox"><strong>Hook → Qualifier → Douleur → Projeter → Pitcher → Closer.</strong><br>Ne donne jamais le prix avant d'avoir qualifié.</div>
+  <div class="lbl">Type de lead</div>
+  <div class="lscroll">
+    <div class="lpill on" onclick="sc(0,this)">🔴 DM entrant <span class="chip hot">ULTRA CHAUD</span></div>
+    <div class="lpill" onclick="sc(1,this)">🟠 Réaction Story <span class="chip hot">CHAUD</span></div>
+    <div class="lpill" onclick="sc(2,this)">🟡 Like Story <span class="chip warm">TIÈDE</span></div>
+    <div class="lpill" onclick="sc(3,this)">🟢 Commentaire <span class="chip warm">TIÈDE</span></div>
+    <div class="lpill" onclick="sc(4,this)">🟣 Like Réel <span class="chip cold">FROID</span></div>
+    <div class="lpill" onclick="sc(5,this)">⚫ Nouveau follower <span class="chip cold">FROID</span></div>
+  </div>
+
+  <div class="sc on" id="s0">
+    <div class="step"><div class="sh"><div class="sd">1</div><div class="sn">Hook</div></div><div class="dm">Yes j'ai vu ton message 👀 tu fais déjà du contenu ou pas encore ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">2</div><div class="sn">Qualifier</div></div><div class="dm">Tu bosses dans quoi exactement ?</div><div class="dm">Et t'utilises Insta pour trouver des clients ou c'est pas encore en place ?</div><div class="dm">Tu génères combien environ avec Insta aujourd'hui ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">3</div><div class="sn">Douleur</div></div><div class="dm">C'est quoi ton plus gros blocage là sur les réseaux ?</div><div class="dm">T'as du mal à avoir de la visibilité, à convertir, ou les deux ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">4</div><div class="sn">Projeter</div></div><div class="dm">Si t'avais un système pour cartonner sur les réseaux et générer des clients, ça changerait quoi pour toi ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">5</div><div class="sn">Pitcher</div></div><div class="dm">Ok je vois exactement où t'en es. On a un programme qui s'appelle Viralité Booster — un système complet pour devenir viral et transformer ça en clients, peu importe ta thématique. Insta, TikTok, YouTube, LinkedIn — tout est couvert. T'as tout ce qu'il faut pour passer à l'action dès le premier jour.</div></div>
+    <div class="step"><div class="sh"><div class="sd">6</div><div class="sn">Closer</div></div><div class="dm">L'accès est à 697€, c'est un investissement unique. T'as des questions avant qu'on avance ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">↩</div><div class="sn">Relance J+1 si silence</div></div><div class="dm">Hey, juste pour voir si t'as eu le temps de regarder 👀 t'en es où ?</div></div>
+  </div>
+  <div class="sc" id="s1">
+    <div class="step"><div class="sh"><div class="sd">1</div><div class="sn">Hook</div></div><div class="dm">Yes j'ai vu ta réaction 👀 ça t'intéresse la viralité ou t'es déjà dedans ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">2</div><div class="sn">Qualifier</div></div><div class="dm">Tu fais quoi comme activité toi ?</div><div class="dm">T'es sur quel réseau principalement ?</div><div class="dm">Et t'as déjà essayé de monétiser ton contenu ou pas encore ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">3→6</div><div class="sn">Suite identique au DM entrant</div></div><div class="dm note">Douleur → Projeter → Pitcher → Closer à 697€.</div></div>
+  </div>
+  <div class="sc" id="s2">
+    <div class="step"><div class="sh"><div class="sd">1</div><div class="sn">Hook</div></div><div class="dm">Hey j'ai vu que t'avais check la story 👀 tu fais déjà du contenu ou pas encore ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">2</div><div class="sn">Transition</div></div><div class="dm">T'es sur Insta pour te faire connaître ou tu cherches encore ton angle ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">3→6</div><div class="sn">Suite identique au DM entrant</div></div><div class="dm note">Qualifier → Douleur → Projeter → Pitcher → Closer à 697€.</div></div>
+  </div>
+  <div class="sc" id="s3">
+    <div class="step"><div class="sh"><div class="sd">1</div><div class="sn">Hook</div></div><div class="dm">Yes j'ai vu ton commentaire 👀 tu bosses déjà sérieusement ton contenu ou tu démarres ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">2</div><div class="sn">Qualifier</div></div><div class="dm">C'est quoi ton domaine ? Je veux comprendre où t'en es.</div><div class="dm">T'as du mal à avoir de la visibilité ou c'est plutôt la conversion qui bloque ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">3→6</div><div class="sn">Suite identique au DM entrant</div></div><div class="dm note">Douleur → Projeter → Pitcher → Closer à 697€.</div></div>
+  </div>
+  <div class="sc" id="s4">
+    <div class="step"><div class="sh"><div class="sd">1</div><div class="sn">Hook</div></div><div class="dm">Merci pour le like 🙏 t'es déjà actif sur les réseaux ou tu observes encore ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">2</div><div class="sn">Qualifier</div></div><div class="dm">Tu bosses dans quoi toi ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">⚠</div><div class="sn">Attention</div></div><div class="dm warn">Lead froid — ne pas pitcher avant 2-3 échanges. Laisser venir.</div></div>
+  </div>
+  <div class="sc" id="s5">
+    <div class="step"><div class="sh"><div class="sd">1</div><div class="sn">Hook</div></div><div class="dm">Bienvenue 👀 t'es dans quel domaine toi ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">2</div><div class="sn">Réchauffer</div></div><div class="dm">Cool ! Et tu cherches à développer ta présence sur les réseaux ou t'as déjà un système en place ?</div></div>
+    <div class="step"><div class="sh"><div class="sd">⚠</div><div class="sn">Attention</div></div><div class="dm warn">Ne pitcher qu'après 2-3 échanges minimum. Réchauffer d'abord.</div></div>
+  </div>
+
+  <div class="divl"></div>
+  <div class="lbl">Objections fréquentes</div>
+  <div class="obj"><div class="oq">❌ "C'est trop cher"</div><div class="oa">"Je comprends. Ce qui coûte vraiment cher, c'est de rester bloqué encore 6 mois. C'est quoi qui te fait vraiment hésiter ?"</div></div>
+  <div class="obj"><div class="oq">❌ "J'y réfléchis"</div><div class="oa">"C'est quoi le point sur lequel tu réfléchis ? Le résultat ou l'investissement ?"</div></div>
+  <div class="obj"><div class="oq">❌ "J'ai pas le temps"</div><div class="oa">"Justement, tout est pensé pour aller vite — les modules sont courts et actionnables. T'as combien d'heures par semaine ?"</div></div>
+  <div class="obj"><div class="oq">❌ "J'ai déjà essayé des formations"</div><div class="oa">"C'est pas une formation classique — c'est un système complet avec des modules actionnables sur chaque réseau. C'était quoi le problème des autres ?"</div></div>
+  <div class="obj"><div class="oq">❌ "Ça marche sur quel réseau ?"</div><div class="oa">"Insta, TikTok, YouTube, LinkedIn — les 4 sont dans le programme. T'en as un en priorité ?"</div></div>
+</div>
+
+<!-- TABLEAU -->
+<div class="pg" id="pg-tableau">
+  <div class="lbl">Suivi équipe — temps réel 🔴</div>
+  <div class="stats">
+    <div class="stat"><span class="sn2" id="ct">—</span><div class="sl">Leads contactés</div></div>
+    <div class="stat"><span class="sn2 o" id="ch">—</span><div class="sl">Chauds 🔥</div></div>
+    <div class="stat"><span class="sn2" id="cp">—</span><div class="sl">Pitchés</div></div>
+    <div class="stat"><span class="sn2 o" id="cc">—</span><div class="sl">Closés ✅</div></div>
+  </div>
+
+  <button class="abtn" onclick="addLead()">+ Ajouter un lead</button>
+
+  <!-- Mobile -->
+  <div class="mobile-only" id="mcards"><div style="text-align:center;padding:30px;color:var(--muted);font-size:13px;">⏳ Connexion...</div></div>
+
+  <!-- Desktop -->
+  <div class="desktop-only" style="background:#fff;border-radius:10px;border:1px solid var(--border);overflow:hidden;margin-bottom:14px;">
+    <table style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead><tr>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">@Pseudo</th>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">Type</th>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">Date</th>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">Répondu ?</th>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">Statut</th>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">Action suivante</th>
+        <th style="background:var(--dark);color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 9px;text-align:left;white-space:nowrap;">Note</th>
+      </tr></thead>
+      <tbody id="dtbody"><tr><td colspan="7" style="text-align:center;padding:20px;color:var(--muted);">⏳ Connexion à Firebase...</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="sbtns">
+    <button class="sbtn" onclick="clearAll()">Tout effacer</button>
+    <button class="sbtn" onclick="exportCSV()">Exporter CSV</button>
+  </div>
+  <div class="rstrip">
+    <div class="pill">⏱ <strong>DM entrant</strong> → dans l'heure</div>
+    <div class="pill">🚫 <strong>Jamais</strong> le prix sans qualifier</div>
+    <div class="pill">🔄 Pas de réponse = relance J+1</div>
+    <div class="pill">💬 Close <strong>en DM</strong></div>
+    <div class="pill">🎯 10 convos → 1-2 closes</div>
+  </div>
+</div>
+</div>
+
+<!-- PAGE PAIEMENT -->
+<div class="pg" id="pg-paiement" style="padding:16px 14px 24px;">
+  <div class="lbl">Liens de paiement</div>
+  <div style="background:var(--ol);border-radius:10px;padding:12px 14px;margin-bottom:20px;font-size:13px;line-height:1.6;">
+    <strong>Copie le lien et envoie-le directement en DM</strong> dès que le prospect est prêt à payer.
+  </div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:12px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--dark);">697€ — 1x</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px;">Paiement en une fois</div>
+      </div>
+      <div style="background:#EFFFEF;color:#18A558;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">RECOMMANDÉ</div>
+    </div>
+    <div style="background:var(--grey);border-radius:8px;padding:10px 12px;font-size:11px;color:var(--muted);word-break:break-all;margin-bottom:10px;">https://whop.com/checkout/plan_CIzkwy3i6C3HB</div>
+    <button onclick="copyLink('https://whop.com/checkout/plan_CIzkwy3i6C3HB','btn1')" id="btn1" style="width:100%;padding:12px;border-radius:8px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📋 Copier le lien</button>
+  </div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:12px;">
+    <div style="margin-bottom:10px;">
+      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--dark);">2x 349€</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px;">Paiement en 2 fois</div>
+    </div>
+    <div style="background:var(--grey);border-radius:8px;padding:10px 12px;font-size:11px;color:var(--muted);word-break:break-all;margin-bottom:10px;">https://whop.com/checkout/plan_wxLzmj2Ohox8b</div>
+    <button onclick="copyLink('https://whop.com/checkout/plan_wxLzmj2Ohox8b','btn2')" id="btn2" style="width:100%;padding:12px;border-radius:8px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📋 Copier le lien</button>
+  </div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:20px;">
+    <div style="margin-bottom:10px;">
+      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--dark);">3x 233€</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px;">Paiement en 3 fois</div>
+    </div>
+    <div style="background:var(--grey);border-radius:8px;padding:10px 12px;font-size:11px;color:var(--muted);word-break:break-all;margin-bottom:10px;">https://whop.com/checkout/plan_HOx6fpkyqoXMJ</div>
+    <button onclick="copyLink('https://whop.com/checkout/plan_HOx6fpkyqoXMJ','btn3')" id="btn3" style="width:100%;padding:12px;border-radius:8px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📋 Copier le lien</button>
+  </div>
+  <div style="background:var(--dark);border-radius:10px;padding:14px 16px;">
+    <div style="font-family:'Syne',sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--orange);margin-bottom:8px;">💡 CONSEIL</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.6;">Propose toujours le <strong style="color:#fff;">1x en premier</strong>. Si objection prix → propose le 2x. Le 3x c'est le dernier recours.</div>
+  </div>
+</div>
+
+<nav class="bnav" style="grid-template-columns:1fr 1fr 1fr;">
+  <button class="nb on" id="nb-scripts" onclick="sw('scripts')"><span class="ic">💬</span>Scripts</button>
+  <button class="nb" id="nb-tableau" onclick="sw('tableau')"><span class="ic">📋</span>Suivi</button>
+  <button class="nb" id="nb-paiement" onclick="sw('paiement')"><span class="ic">💳</span>Paiement</button>
+</nav>
+
+<script>
+function copyLink(url, btnId) {
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById(btnId);
+    btn.textContent = '✅ Copié !';
+    btn.style.background = '#18A558';
+    setTimeout(() => { btn.textContent = '📋 Copier le lien'; btn.style.background = 'var(--dark)'; }, 2000);
+  });
+}
+<\/script>
+
+<!-- Firebase SDK -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, onValue, set, remove } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBlzFySahwVj3CCZJBIpEaUzL1zsyPn0U8",
+  authDomain: "viralite-booster.firebaseapp.com",
+  databaseURL: "https://viralite-booster-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "viralite-booster",
+  storageBucket: "viralite-booster.firebasestorage.app",
+  messagingSenderId: "583567827356",
+  appId: "1:583567827356:web:2b69443655988fa0e86859",
+  measurementId: "G-M792KK5TXQ"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const leadsRef = ref(db, 'leads');
+
+const TYPES=['🔴 DM entrant','🟠 Réaction Story','🟡 Like Story','🟢 Commentaire','🟣 Like Réel','⚫ Follower'];
+const REPS=['✅ Oui','❌ Non','🔄 Relancé'];
+const STATS=['🔥 Chaud','🌡 Tiède','❄️ Froid','🎯 Pitché','✅ Closé 697€','🚫 Non définitif'];
+const IS='width:100%;border:none;background:transparent;font-family:\'DM Sans\',sans-serif;font-size:12px;color:var(--dark);padding:9px;outline:none;';
+
+let rows = [];
+let saveTimer = null;
+
+function syncUI(s){
+  const dot=document.getElementById('sdot'),lbl=document.getElementById('slbl');
+  dot.className='sdot '+(s||'');
+  lbl.textContent=s==='ok'?'Synchronisé':s==='saving'?'Sauvegarde...':'Hors ligne';
+}
+
+// Écoute les changements en temps réel
+onValue(leadsRef, (snapshot) => {
+  const data = snapshot.val();
+  rows = data ? Object.values(data) : [];
+  render();
+  syncUI('ok');
+});
+
+async function persist() {
+  syncUI('saving');
+  try {
+    const obj = {};
+    rows.forEach(r => { obj[r.id] = r; });
+    await set(leadsRef, obj);
+    syncUI('ok');
+  } catch(e) { syncUI(''); }
+}
+
+function scheduleSave(){ clearTimeout(saveTimer); saveTimer = setTimeout(persist, 700); }
+
+window.sw = function(n){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('pg-'+n).classList.add('on');
+  document.getElementById('nb-'+n).classList.add('on');
+};
+
+window.sc = function(i,el){
+  document.querySelectorAll('.lpill').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.sc').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('s'+i).classList.add('on');
+};
+
+function nr(){ return {id:'r'+Date.now()+Math.floor(Math.random()*9999),pseudo:'',type:'',date:new Date().toISOString().split('T')[0],rep:'',statut:'',action:'',note:''}; }
+
+window.upd = function(id,k,v){ const r=rows.find(r=>r.id===id); if(r){r[k]=v;} scheduleSave(); doStats(); };
+window.addLead = function(){ rows.push(nr()); render(); scheduleSave(); setTimeout(()=>document.getElementById('mcards').lastElementChild?.scrollIntoView({behavior:'smooth',block:'nearest'}),50); };
+window.del = function(id){ rows=rows.filter(r=>r.id!==id); render(); persist(); };
+window.clearAll = function(){ if(confirm("Effacer tous les leads ? Visible par toute l'équipe.")){ rows=[]; render(); persist(); } };
+
+function e(v){ return(v||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+function sel(opts,val,id,k){ return '<select onchange="upd(\''+id+'\',\''+k+'\',this.value)"><option value="">—</option>'+opts.map(o=>'<option '+(val===o?'selected':'')+'>'+o+'</option>').join('')+'</select>'; }
+
+function render(){
+  // Mobile cards
+  const mc = document.getElementById('mcards');
+  mc.innerHTML = rows.length===0
+    ? '<div style="text-align:center;padding:30px;color:var(--muted);font-size:13px;">Aucun lead — appuie sur + pour commencer</div>'
+    : rows.map(r=>`
+      <div class="lcard">
+        <div class="ltop">
+          <div class="lpseudo"><input type="text" value="${e(r.pseudo)}" placeholder="@pseudo" onchange="upd('${r.id}','pseudo',this.value)"></div>
+          <button class="delbtn" onclick="del('${r.id}')">✕</button>
+        </div>
+        <div class="lfields">
+          <div class="fld"><div class="flbl">Type</div>${sel(TYPES,r.type,r.id,'type')}</div>
+          <div class="fld"><div class="flbl">Date</div><input type="date" value="${e(r.date)}" onchange="upd('${r.id}','date',this.value)"></div>
+          <div class="fld"><div class="flbl">Répondu ?</div>${sel(REPS,r.rep,r.id,'rep')}</div>
+          <div class="fld"><div class="flbl">Statut</div>${sel(STATS,r.statut,r.id,'statut')}</div>
+          <div class="fld" style="grid-column:span 2"><div class="flbl">Action suivante</div><input type="text" value="${e(r.action)}" placeholder="Relance J+1..." onchange="upd('${r.id}','action',this.value)"></div>
+          <div class="fld" style="grid-column:span 2"><div class="flbl">Note</div><input type="text" value="${e(r.note)}" placeholder="Objection..." onchange="upd('${r.id}','note',this.value)"></div>
+        </div>
+      </div>`).join('');
+
+  // Desktop table
+  document.getElementById('dtbody').innerHTML = rows.length===0
+    ? '<tr><td colspan="7" style="text-align:center;padding:20px;color:var(--muted);">Aucun lead — cliquez sur + pour commencer</td></tr>'
+    : rows.map((r,i)=>`
+      <tr style="border-bottom:1px solid var(--border);${i%2?'background:#FAFAFA':''}">
+        <td style="padding:0"><input style="${IS}" type="text" value="${e(r.pseudo)}" placeholder="@username" onchange="upd('${r.id}','pseudo',this.value)"></td>
+        <td style="padding:0"><select style="${IS}" onchange="upd('${r.id}','type',this.value)"><option value="">—</option>${TYPES.map(v=>'<option '+(r.type===v?'selected':'')+'>'+v+'</option>').join('')}</select></td>
+        <td style="padding:0"><input style="${IS}" type="date" value="${e(r.date)}" onchange="upd('${r.id}','date',this.value)"></td>
+        <td style="padding:0"><select style="${IS}" onchange="upd('${r.id}','rep',this.value)"><option value="">—</option>${REPS.map(v=>'<option '+(r.rep===v?'selected':'')+'>'+v+'</option>').join('')}</select></td>
+        <td style="padding:0"><select style="${IS}" onchange="upd('${r.id}','statut',this.value)"><option value="">—</option>${STATS.map(v=>'<option '+(r.statut===v?'selected':'')+'>'+v+'</option>').join('')}</select></td>
+        <td style="padding:0"><input style="${IS}" type="text" value="${e(r.action)}" placeholder="Relance J+1..." onchange="upd('${r.id}','action',this.value)"></td>
+        <td style="padding:0"><input style="${IS}" type="text" value="${e(r.note)}" placeholder="Note..." onchange="upd('${r.id}','note',this.value)"></td>
+      </tr>`).join('');
+
+  doStats();
+}
+
+function doStats(){
+  document.getElementById('ct').textContent=rows.filter(r=>r.pseudo).length;
+  document.getElementById('ch').textContent=rows.filter(r=>r.statut==='🔥 Chaud').length;
+  document.getElementById('cp').textContent=rows.filter(r=>r.statut==='🎯 Pitché').length;
+  document.getElementById('cc').textContent=rows.filter(r=>r.statut==='✅ Closé 697€').length;
+}
+
+window.exportCSV = function(){
+  const h=['Pseudo','Type','Date','Répondu','Statut','Action','Note'];
+  const csv=[h.join(','),...rows.map(r=>[r.pseudo,r.type,r.date,r.rep,r.statut,r.action,r.note].map(v=>'"'+(v||'').replace(/"/g,'""')+'"').join(','))].join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='leads_viralite_booster.csv';a.click();
+};
+
+syncUI('saving');
+</script>
+</body>
+</html>
