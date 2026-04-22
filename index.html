@@ -197,10 +197,61 @@ header{height:52px;background:var(--dark);display:flex;align-items:center;justif
 </div>
 </div>
 
-<nav class="bnav">
+<!-- PAGE PAIEMENT -->
+<div class="pg" id="pg-paiement" style="padding:16px 14px 24px;">
+  <div class="lbl">Liens de paiement</div>
+  <div style="background:var(--ol);border-radius:10px;padding:12px 14px;margin-bottom:20px;font-size:13px;line-height:1.6;">
+    <strong>Copie le lien et envoie-le directement en DM</strong> dès que le prospect est prêt à payer.
+  </div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:12px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--dark);">697€ — 1x</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px;">Paiement en une fois</div>
+      </div>
+      <div style="background:#EFFFEF;color:#18A558;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">RECOMMANDÉ</div>
+    </div>
+    <div style="background:var(--grey);border-radius:8px;padding:10px 12px;font-size:11px;color:var(--muted);word-break:break-all;margin-bottom:10px;">https://whop.com/checkout/plan_CIzkwy3i6C3HB</div>
+    <button onclick="copyLink('https://whop.com/checkout/plan_CIzkwy3i6C3HB','btn1')" id="btn1" style="width:100%;padding:12px;border-radius:8px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📋 Copier le lien</button>
+  </div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:12px;">
+    <div style="margin-bottom:10px;">
+      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--dark);">2x 349€</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px;">Paiement en 2 fois</div>
+    </div>
+    <div style="background:var(--grey);border-radius:8px;padding:10px 12px;font-size:11px;color:var(--muted);word-break:break-all;margin-bottom:10px;">https://whop.com/checkout/plan_wxLzmj2Ohox8b</div>
+    <button onclick="copyLink('https://whop.com/checkout/plan_wxLzmj2Ohox8b','btn2')" id="btn2" style="width:100%;padding:12px;border-radius:8px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📋 Copier le lien</button>
+  </div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:20px;">
+    <div style="margin-bottom:10px;">
+      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--dark);">3x 233€</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px;">Paiement en 3 fois</div>
+    </div>
+    <div style="background:var(--grey);border-radius:8px;padding:10px 12px;font-size:11px;color:var(--muted);word-break:break-all;margin-bottom:10px;">https://whop.com/checkout/plan_HOx6fpkyqoXMJ</div>
+    <button onclick="copyLink('https://whop.com/checkout/plan_HOx6fpkyqoXMJ','btn3')" id="btn3" style="width:100%;padding:12px;border-radius:8px;background:var(--dark);color:#fff;border:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;">📋 Copier le lien</button>
+  </div>
+  <div style="background:var(--dark);border-radius:10px;padding:14px 16px;">
+    <div style="font-family:'Syne',sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--orange);margin-bottom:8px;">💡 CONSEIL</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.6;">Propose toujours le <strong style="color:#fff;">1x en premier</strong>. Si objection prix → propose le 2x. Le 3x c'est le dernier recours.</div>
+  </div>
+</div>
+
+<nav class="bnav" style="grid-template-columns:1fr 1fr 1fr;">
   <button class="nb on" id="nb-scripts" onclick="sw('scripts')"><span class="ic">💬</span>Scripts</button>
   <button class="nb" id="nb-tableau" onclick="sw('tableau')"><span class="ic">📋</span>Suivi</button>
+  <button class="nb" id="nb-paiement" onclick="sw('paiement')"><span class="ic">💳</span>Paiement</button>
 </nav>
+
+<script>
+function copyLink(url, btnId) {
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById(btnId);
+    btn.textContent = '✅ Copié !';
+    btn.style.background = '#18A558';
+    setTimeout(() => { btn.textContent = '📋 Copier le lien'; btn.style.background = 'var(--dark)'; }, 2000);
+  });
+}
+<\/script>
 
 <!-- Firebase SDK -->
 <script type="module">
